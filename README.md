@@ -37,21 +37,7 @@ Spring Boot（MVC）・Thymeleaf・MySQL・Docker Compose を学習するため�
 
 ## 📂 フォルダ構成
 
-memo-app/
-├─ src/
-│ ├─ main/
-│ │ ├─ java/com/example/memoapp/
-│ │ │ ├─ controller/ MemoPageController.java
-│ │ │ ├─ entity/ Memo.java
-│ │ │ └─ repository/ MemoRepository.java
-│ │ ├─ resources/
-│ │ │ ├─ templates/index.html
-│ │ │ └─ static/css/style.css
-├─ Dockerfile
-├─ docker-compose.yml
-└─ pom.xml
-
-
+![フォルダ構成](images/hierarchy.png)
 
 ---
 
@@ -101,13 +87,9 @@ http://<PCのIP>:8080/
 
 ---
 
-## 💡 画面イメージ（任意）
+## 💡 画面イメージ
 
-※ スクショを貼ると GitHub の見映えがさらに良くなる！
-
-
-yaml
-コードをコピーする
+![画面イメージ](images/home.png)
 
 ---
 
