@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>メモアプリ</title>
+    <link rel="stylesheet" th:href="@{/style.css}">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>メモアプリ</h1>
+
+    <!-- 追加 or 編集フォーム -->
+    <div class="form-area" th:if="${editMemo == null}">
+        <form action="/memo" method="post">
+            <input type="text" name="text" placeholder="メモを入力">
+            <button type="submit">追加</button>
+        </form>
+    </div>
+
+    <div class="form-area" th:if="${editMemo != null}">
+        <form action="/memo/update" method="post">
+            <input type="hidden" name="id" th:value="${editMemo.id}">
+            <input type="text" name="text" th:value="${editMemo.text}">
+            <button type="submit">更新</button>
+        </form>
+        <a href="/" class="cancel-link">キャンセル</a>
+    </div>
+
+    <div class="memo-list">
+        <div th:each="memo : ${memos}" class="memo-item">
+            <span class="memo-text" th:text="${memo.text}"></span>
+            <span class="memo-actions">
+                <a th:href="'/?editId=' + ${memo.id}">編集</a>
+                <a th:href="'/memo/delete/' + ${memo.id}">削除</a>
+            </span>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

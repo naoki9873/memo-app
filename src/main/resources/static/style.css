@@ -1,0 +1,107 @@
+/* 全体 */
+body {
+    font-family: "Hiragino Sans", sans-serif;
+    background: #1e1e1e;
+    margin: 0;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    color: #e5e5e5;
+}
+
+/* コンテナ（カード） */
+.container {
+    width: 450px;
+    background: #2a2a2a;
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.5);
+}
+
+/* 見出し */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fafafa;
+}
+
+/* 入力フォーム */
+.form-area {
+    margin-bottom: 25px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #555;
+    background: #3b3b3b;
+    color: #fafafa;
+    margin-bottom: 12px;
+    font-size: 16px;
+}
+
+input[type="text"]::placeholder {
+    color: #888;
+}
+
+/* ボタン */
+button {
+    width: 100%;
+    background: #4caf50;
+    border: none;
+    padding: 12px;
+    color: white;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #43a047;
+}
+
+/* キャンセルリンク */
+.cancel-link {
+    display: block;
+    text-align: center;
+    margin-top: 8px;
+    color: #a5a5a5;
+    text-decoration: none;
+}
+
+.cancel-link:hover {
+    color: #fff;
+}
+
+/* メモ一覧 */
+.memo-list {
+    margin-top: 20px;
+}
+
+.memo-item {
+    background: #333;
+    padding: 12px 14px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #444;
+}
+
+.memo-text {
+    font-size: 16px;
+    color: #eee;
+}
+
+/* 編集／削除リンク */
+.memo-actions a {
+    margin-left: 10px;
+    color: #64b5f6; /* 青系で見やすい */
+    text-decoration: none;
+}
+
+.memo-actions a:hover {
+    text-decoration: underline;
+}
