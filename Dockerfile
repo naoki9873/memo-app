@@ -1,8 +1,14 @@
+# Java 17 の実行環境
 FROM eclipse-temurin:17
 
+# アプリを配置する作業ディレクトリ
 WORKDIR /app
-COPY target/memo-app-0.0.1-SNAPSHOT.jar app.jar
 
+# ビルド済みの JAR をコピー
+COPY target/app.jar app.jar
+
+# Spring Boot のデフォルトポート
 EXPOSE 8080
-CMD ["java", "-jar", "app.jar"]
 
+# アプリ起動コマンド
+CMD ["java", "-jar", "app.jar"]
