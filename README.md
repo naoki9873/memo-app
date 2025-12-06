@@ -59,45 +59,53 @@ memo-app/
 
 ### 1.準備
 
+Docker Desktopをインストールする
 
-Docker Desktop
+ダウンロード：https://www.docker.com/products/docker-desktop/
 
+### 2.プロジェクトを取得
 
-ダウンロード：
+ターミナル、コマンドプロンプトで実行
 
-https://www.docker.com/products/docker-desktop/
+```
+git clone https://github.com/naoki9873/memo-app.git
+```
 
+###  3.JARを作成
 
-### 2. プロジェクトを取得
+ターミナル、コマンドプロンプトで実行
 
-https://github.com/naoki9873/memo-app
+```
+./mvnw clean package -DskipTests
+```
 
+### 4.Docker Compose で起動
 
-### 3. Docker Compose で起動
+ターミナル、コマンドプロンプトで実行
 
+```
 docker compose up -d --build
+```
 
-
-### 4. アクセス
+### 5.アクセス
 
 http://localhost:8080/
 
+### 6.停止したいとき
 
-### 4. 停止したいとき
-
+```
 docker compose down
+```
 
+### 7.他のデバイスでもアクセスする
 
-### 5. 
+①ローカルIPを調べる
 
-① ローカル IP を調べる
-
-他のデバイスで
+②他のデバイスで
 
 http://<PCのIP>:8080/
 
-と入力
-
+と入力するとアクセスできる。
 
 ---
 
