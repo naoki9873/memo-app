@@ -57,23 +57,46 @@ memo-app/
 
 ## ▶️ 起動方法（Docker Compose）
 
-### 1. Jar をビルド
+### 1.準備
 
-./mvnw clean package -DskipTests
 
-shell
-コードをコピーする
+Docker Desktop
 
-### 2. Docker Compose で起動
+
+ダウンロード：
+
+https://www.docker.com/products/docker-desktop/
+
+
+### 2. プロジェクトを取得
+
+https://github.com/naoki9873/memo-app
+
+
+### 3. Docker Compose で起動
 
 docker compose up -d --build
 
-shell
-コードをコピーする
 
-### 3. ブラウザでアクセス
+### 4. アクセス
 
 http://localhost:8080/
+
+
+### 4. 停止したいとき
+
+docker compose down
+
+
+### 5. 
+
+① ローカル IP を調べる
+
+他のデバイスで
+
+http://<PCのIP>:8080/
+
+と入力
 
 
 ---
