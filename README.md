@@ -71,15 +71,7 @@ Docker Desktopをインストールする
 git clone https://github.com/naoki9873/memo-app.git
 ```
 
-###  3.JARを作成
-
-ターミナル、コマンドプロンプトで実行
-
-```
-./mvnw clean package -DskipTests
-```
-
-### 4.Docker Compose で起動
+### 3.Docker Composeで起動
 
 ターミナル、コマンドプロンプトで実行
 
@@ -87,17 +79,17 @@ git clone https://github.com/naoki9873/memo-app.git
 docker compose up -d --build
 ```
 
-### 5.アクセス
+### 4.アクセス
 
 http://localhost:8080/
 
-### 6.停止したいとき
+### 5.停止したいとき
 
 ```
 docker compose down
 ```
 
-### 7.他のデバイスでもアクセスする
+### 6.他のデバイスでもアクセスする
 
 ①ローカルIPを調べる
 
